@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/apreczewski/4robos/issues"
   },
-  "homepage": "https://github.com/apreczewski/4robos#readme"
+  "homepage": "https://github.com/apreczewski/4robos#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  }
 }
