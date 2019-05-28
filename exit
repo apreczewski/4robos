@@ -1,0 +1,43 @@
+[1mdiff --git a/index.js b/index.js[m
+[1mindex e69de29..78fa34f 100644[m
+[1m--- a/index.js[m
+[1m+++ b/index.js[m
+[36m@@ -0,0 +1,23 @@[m
+[32m+[m[32mconst readline = require('readline-sync')[m
+[32m+[m
+[32m+[m[32mfunction start() {[m
+[32m+[m[32m  const content = {}[m
+[32m+[m[32m  content.searchTerm = aksAndReturnSearchTerm()[m
+[32m+[m[32m  content.prefix = aksAndReturnPrefix()[m
+[32m+[m
+[32m+[m[32m  function aksAndReturnSearchTerm() {[m
+[32m+[m[32m    return readline.question('Type a wikipedia search term: ')[m
+[32m+[m[32m  }[m
+[32m+[m
+[32m+[m[32m  function aksAndReturnPrefix(){[m
+[32m+[m[32m    const prefixes = ['Who is', 'What is', 'The history of'][m
+[32m+[m[32m    const selectedPrefixIndex = readline.keyInSelect(prefixes, 'Choose one option: ')[m
+[32m+[m[32m    const selectedPrefixText = prefixes[selectedPrefixIndex][m
+[32m+[m
+[32m+[m[32m    return selectedPrefixText[m
+[32m+[m[32m  }[m
+[32m+[m[32m  console.log(content)[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m[32mstart();[m
+\ No newline at end of file[m
+[1mdiff --git a/package.json b/package.json[m
+[1mindex b479950..800e8e3 100644[m
+[1m--- a/package.json[m
+[1m+++ b/package.json[m
+[36m@@ -15,5 +15,8 @@[m
+   "bugs": {[m
+     "url": "https://github.com/apreczewski/4robos/issues"[m
+   },[m
+[31m-  "homepage": "https://github.com/apreczewski/4robos#readme"[m
+[32m+[m[32m  "homepage": "https://github.com/apreczewski/4robos#readme",[m
+[32m+[m[32m  "dependencies": {[m
+[32m+[m[32m    "readline-sync": "^1.4.9"[m
+[32m+[m[32m  }[m
+ }[m
