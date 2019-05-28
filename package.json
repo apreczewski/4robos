@@ -1,0 +1,19 @@
+{
+  "name": "4robos",
+  "version": "1.0.0",
+  "description": "Robos para criação e postagem de vídeos automaticamente no youtube",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apreczewski/4robos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/apreczewski/4robos/issues"
+  },
+  "homepage": "https://github.com/apreczewski/4robos#readme"
+}
