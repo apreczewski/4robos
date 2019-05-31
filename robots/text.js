@@ -22,7 +22,7 @@ async function robot() {
   await fecthKeywordsOfAllSentences(content)
 
   state.save(content)
-
+//test
   async function fetchContentFromWikipedia(content) {
     const algorithmiaAuthenticated = algorithmia(algorithmiaApiKey)
     const wikipediaAlgorithm = algorithmiaAuthenticated.algo('web/WikipediaParser/0.1.2')
