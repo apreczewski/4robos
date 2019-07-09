@@ -18,6 +18,10 @@
   "homepage": "https://github.com/apreczewski/4robos#readme",
   "dependencies": {
     "algorithmia": "^0.3.10",
+    "express": "^4.17.1",
+    "googleapis": "^40.0.0",
+    "image-downloader": "^3.4.2",
+    "react-native-instagram-login": "^1.1.1",
     "readline-sync": "^1.4.9",
     "sbd": "^1.0.15",
     "watson-developer-cloud": "^4.0.1"

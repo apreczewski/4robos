@@ -10,9 +10,10 @@ const nlu = new NaturalLanguageUnderstandingV1({
   url: 'https://gateway.watsonplatform.net/natural-language-understanding/api/'
 });
 
-const state = require('./state')
+const state = require('./state.js')
 
 async function robot() {
+  console.log('> [text-robot] Starting...')
   const content = state.load()
 
   await fetchContentFromWikipedia(content)
@@ -20,15 +21,19 @@ async function robot() {
   breakContentIntoSentences(content)
   limitMaximumSentences(content)
   await fecthKeywordsOfAllSentences(content)
-
   state.save(content)
-//test
+
   async function fetchContentFromWikipedia(content) {
+    console.log('> [text-robot] Fetching content from Wikipedia')
     const algorithmiaAuthenticated = algorithmia(algorithmiaApiKey)
     const wikipediaAlgorithm = algorithmiaAuthenticated.algo('web/WikipediaParser/0.1.2')
     const wikipediaResponse = await wikipediaAlgorithm.pipe(content.searchTerm)
     const wikipediaContent = wikipediaResponse.get()
+
     content.sourceContentOriginal = wikipediaContent.content
+
+    console.log(content)
+    console.log('> [text-robot] Fetching done!')
   }
 
   async function sanitizeContent(content) {
